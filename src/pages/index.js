@@ -3,9 +3,6 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProducFeed from "../components/ProducFeed";
 export default function Home({ products }) {
-  console.log("====================================");
-  console.log(products);
-  console.log("====================================");
   return (
     <div className="bg-gray-100">
       <Head>
