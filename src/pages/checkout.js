@@ -34,6 +34,8 @@ const checkout = () => {
                 description={item.description}
                 category={item.category}
                 image={item.image}
+                rating={item.rating}
+                hasPrime={item.hasPrime}
               />
             ))}
           </div>

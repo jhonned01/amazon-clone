@@ -11,7 +11,27 @@ export const basketSlice = createSlice({
     addToBasket: (state, action) => {
       state.items = [...state.items, action.payload];
     },
-    removeFromBasket: (state, action) => {},
+    removeFromBasket: (state, action) => {
+      /*  const index = state.items.findIndex(
+        (basketItem) => basketItem.id === action.payload.id
+      );
+
+      console.log(index);
+      let newBasket = [...state.items];
+
+      if (index >= 0) {
+        newBasket.splice(index, 1);
+      } else {
+        console.warn(
+          `Cant remove produc (id:${action.payload.id} is not in the basket)`
+        );
+      }
+      state.items = newBasket; */
+      const newBasket = state.items.filter(
+        (item) => item.id !== action.payload.id
+      );
+      state.items = newBasket;
+    },
   },
 });
 

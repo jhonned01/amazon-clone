@@ -17,7 +17,16 @@ const Product = ({ id, title, price, description, category, image }) => {
   const [hasPrime] = useState(Math.random() < 0.5);
 
   const addItemToBasket = () => {
-    const product = { id, title, price, description, category, image };
+    const product = {
+      id,
+      title,
+      price,
+      hasPrime,
+      description,
+      category,
+      image,
+      rating,
+    };
     // sending produc actions redux store
     dispatch(addToBasket(product));
   };
